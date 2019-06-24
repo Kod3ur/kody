@@ -1,0 +1,14 @@
+#kody-home-image
+{
+	width: 100%;
+	height: 590px;
+	
+}
+
+@media all and (max-width: 1000px) 
+{ 
+  #kody-home-image
+  {
+   height: 250px;
+  }
+}
