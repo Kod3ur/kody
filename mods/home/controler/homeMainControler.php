@@ -1,13 +1,13 @@
 <?php
 
-#This class contains all actions of the "admin" module main controler
+#This class contains all actions of the "home" module main controler
 
-require_once "mods/admin/view/displayer.php";
+require_once "mods/home/view/homeDisplayer.php";
 
-class adminModuleMainControler
+class homeModuleMainControler
 {
 	public static function checkModAgain(string $module){
-		if($module !== "admin"){
+		if($module !== "home"){
 			exit();
 		}else{
 			return TRUE;
@@ -15,18 +15,20 @@ class adminModuleMainControler
 	}
 
 	public static function printTheTitle(){
-		$title = adminDisplayer::ReturnTheTitle();
-		echo $title;
+		 HomeDisplayer::ReturnTheTitle();
+		
 	}
 
 	public static function printTheMetaDescription(){
-		$MetaDescription = adminDisplayer::ReturnTheMetaDescription();
-		echo $MetaDescription;
+		 HomeDisplayer::ReturnTheMetaDescription();
+	}
+
+	public static function printTheImage(){
+		HomeDisplayer::ReturnTheImage();
 	}
 
 	public static function printTheContent(){
-		$content = adminDisplayer::ReturnTheContent();
-		echo $content;
+		 HomeDisplayer::ReturnTheContent();
 	}
 	public static function getDataFromCache(){
 		#Call to a function that get data from the cache here

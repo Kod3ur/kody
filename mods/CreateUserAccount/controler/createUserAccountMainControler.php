@@ -2,9 +2,9 @@
 
 #This class contains all actions of the "CreateUserAccount" module main controler
 
-require_once "mods/CreateUserAccount/view/displayer.php";
-require_once "mods/CreateUserAccount/model/mappers/CreateUserAccount.php";
-require_once "mods/CreateUserAccount/ajax/CreateUserAccount.php";
+require_once "mods/CreateUserAccount/view/createUserAccountDisplayer.php";
+require_once "mods/CreateUserAccount/model/mappers/createUserAccountMapper.php";
+require_once "mods/CreateUserAccount/ajax/createUserAccountAjax.php";
 
 class CreateUserAccountModuleMainControler
 {
@@ -33,18 +33,15 @@ class CreateUserAccountModuleMainControler
 	}
 
 	public static function printTheTitle(){
-		$title = CreateUserAccountDisplayer::ReturnTheTitle();
-		echo $title;
+		 CreateUserAccountDisplayer::ReturnTheTitle();
 	}
 
 	public static function printTheMetaDescription(){
-		$MetaDescription = CreateUserAccountDisplayer::ReturnTheMetaDescription();
-		echo $MetaDescription;
+		 CreateUserAccountDisplayer::ReturnTheMetaDescription();
 	}
 
 	public static function printTheContent(){
-		$content = CreateUserAccountDisplayer::ReturnTheContent();
-		echo $content;
+		 CreateUserAccountDisplayer::ReturnTheContent();
 	}
 
 	public static function errorGetter($errorOnName,$errorOnEmail,$errorOnNumber,$errorOnPassword, $errorOnUser){

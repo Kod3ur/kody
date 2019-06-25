@@ -6,15 +6,15 @@ class HomeDisplayer
 {
 
 	public static function ReturnTheTitle(){
-		return "Accueil";
+		echo "Accueil";
 	}
 
 	public static function ReturnTheMetaDescription(){
-		return "Bienvenue sur kody";
+		echo "Bienvenue sur kody";
 	}
 
 	public static function ReturnTheContent(){
-		return "</div><div class='card-content card-panel teal darken-4 center-align white-text'>
+		echo "</div><div class='card-content card-panel teal darken-4 center-align white-text'>
 	<b><i>KODY APP</i></b>
 	</div>
 
@@ -110,6 +110,6 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	}
 
 	public static function ReturnTheImage(){
-		return "</div><img src='libs/pics/home/kody-home-image.JPG' alt='Image accueil de kody' title='Image accueil de kody' id='kody-home-image'/><div class='container'>";
+		echo "</div><img src='libs/pics/home/kody-home-image.JPG' alt='Image accueil de kody' title='Image accueil de kody' id='kody-home-image'/><div class='container'>";
 	}
 }

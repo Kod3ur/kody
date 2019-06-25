@@ -6,15 +6,15 @@ class LoadMainControler
 {
 	public static function loadTheMainControler(string $module){
 		if($module === "admin"){
-			require_once "mods/admin/controler/".$module.".php";
+			require_once "mods/admin/controler/adminMainControler.php";
 		}elseif($module === "connexion"){
-			require_once "mods/connexion/controler/connexion.php";
+			require_once "mods/connexion/controler/connexionMainControler.php";
 		}elseif($module === "CreateUserAccount"){
-			require_once "mods/CreateUserAccount/controler/CreateUserAccount.php";
+			require_once "mods/CreateUserAccount/controler/CreateUserAccountMainControler.php";
 		}elseif($module === "user"){
-			require_once "mods/user/controler/user.php";
+			require_once "mods/user/controler/userMainControler.php";
 		}elseif($module ==="home"){
-			require_once "mods/home/controler/home.php";
+			require_once "mods/home/controler/homeMainControler.php";
 		}else{
 			exit();
 		}

@@ -1,13 +1,13 @@
 <?php
 
-#This class contains all actions of the "connexion" module main controler
+#This class contains all actions of the "user" module main controler
 
-require_once "mods/connexion/view/displayer.php";
+require_once "mods/user/view/userDisplayer.php";
 
-class connexionModuleMainControler
+class userModuleMainControler
 {
 	public static function checkModAgain(string $module){
-		if($module !== "connexion"){
+		if($module !== "user"){
 			exit();
 		}else{
 			return TRUE;
@@ -15,17 +15,17 @@ class connexionModuleMainControler
 	}
 
 	public static function printTheTitle(){
-		$title = connexionDisplayer::ReturnTheTitle();
+		$title = userDisplayer::ReturnTheTitle();
 		echo $title;
 	}
 
 	public static function printTheMetaDescription(){
-		$MetaDescription = connexionDisplayer::ReturnTheMetaDescription();
+		$MetaDescription = userDisplayer::ReturnTheMetaDescription();
 		echo $MetaDescription;
 	}
 
 	public static function printTheContent(){
-		$content = connexionDisplayer::ReturnTheContent();
+		$content = userDisplayer::ReturnTheContent();
 		echo $content;
 	}
 	public static function getDataFromCache(){

@@ -8,7 +8,7 @@
 
 #Getting the module
 
-	$getMod = $_GET["mod"];
+	isset($_GET["mod"]) ? $getMod = $_GET["mod"] : $getMod = "home";
 	$module = ModuleAndControler::returnModule($getMod);
 
 #Getting the frontControler
@@ -71,11 +71,11 @@
 
 		if(isset($_POST["submit"])){
 
-			$name = $_POST["name"];
-			$email = $_POST["email"];
-			$number = intval($_POST["number"]);
-			$password = $_POST["password"];
-			$password_bis = $_POST["password_bis"];
+			isset($_POST["name"]) ? $name = $_POST["name"] : $name = "";
+			isset($_POST["email"]) ? $email = $_POST["email"] : $email = "";
+			isset($_POST["number"]) ? $number = intval($_POST["number"]) : $number = intval("");
+			isset($_POST["password"]) ? $password = $_POST["password"] : $password = "";
+			isset($_POST["password_bis"]) ? $password_bis = $_POST["password_bis"] : $password_bis = "";
 
 			$errorOnName = CheckCreateUserAccountData::verifyTheName($name);
 			$errorOnEmail = CheckCreateUserAccountData::verifyEmail($email);

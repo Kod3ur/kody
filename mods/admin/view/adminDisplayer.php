@@ -6,15 +6,15 @@ class AdminDisplayer
 {
 
 	public static function ReturnTheTitle(){
-		return "Administration";
+		echo "Administration";
 	}
 
 	public static function ReturnTheMetaDescription(){
-		return "Tableau de bord des administrateurs.";
+		echo "Tableau de bord des administrateurs.";
 	}
 
 	public static function ReturnTheContent(){
-		return "Bienvenue sur votre tableau de bord !";
+		echo "Bienvenue sur votre tableau de bord !";
 	}
 
 	public static function printFormErrors(){

@@ -4,15 +4,15 @@ class ConnexionDisplayer
 {
 
 	public static function ReturnTheTitle(){
-		return "Connexion";
+		echo "Connexion";
 	}
 
 	public static function ReturnTheMetaDescription(){
-		return "Utilser ce formulaire pour vous connecter à votre compte";
+		echo "Utilser ce formulaire pour vous connecter à votre compte";
 	}
 
 	public static function ReturnTheContent(){
-		return "<div class='card-panel card-content center-align teal darken-4 white-text'>
+		echo "<div class='card-panel card-content center-align teal darken-4 white-text'>
 			<h4>Connexion à un compte</h4>
 			</div>
 

@@ -6,15 +6,15 @@ class CreateUserAccountDisplayer
 {
 
 	public static function ReturnTheTitle(){
-		return "Créer un compte utilisateur";
+		echo "Créer un compte utilisateur";
 	}
 
 	public static function ReturnTheMetaDescription(){
-		return "Remplir tous les champs de ce formulaire pour créer un compte";
+		echo "Remplir tous les champs de ce formulaire pour créer un compte";
 	}
 
 	public static function ReturnTheContent(){
-		return "<div class='card-panel card-content center-align teal darken-4 white-text'>
+		echo "<div class='card-panel card-content center-align teal darken-4 white-text'>
 			<h4>Créer un compte</h4>
 			</div>
 

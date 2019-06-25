@@ -9,17 +9,17 @@ class CheckCreateUserAccountData
 
 		switch ($name) {
 
-			case isset($name) AND !empty($name) AND !is_string($name):
+			case !empty($name) AND !is_string($name):
 
 				return "Votre nom doit être une chaîne de caractère";
 				break;
 
-			case isset($name) AND !empty($name) AND strlen($name) < 2:
+			case !empty($name) AND strlen($name) < 2:
 
 				return "Votre nom est trop court";
 				break;
 
-			case isset($name) AND !empty($name) AND preg_match("#<[a-z]+>#i", $name):
+			case !empty($name) AND preg_match("#<[a-z]+>#i", $name):
 
 				return "Votre nom ne doit contenir aucune balise";
 				break;
@@ -57,11 +57,11 @@ class CheckCreateUserAccountData
 
 			return "Le champ numéro de téléphone ne peut pas être vide";
 
-		}elseif(isset($number) AND !empty($number) AND !is_int($number)){
+		}elseif(!empty($number) AND !is_int($number)){
 
 			return "Votre numéro de téléphone est invalide";
 
-		}elseif(isset($number) AND !empty($number) AND strlen($number) < 9){
+		}elseif(!empty($number) AND strlen($number) < 9){
 
 			return "Votre numéro de téléphone est trop court";
 		}else{
@@ -76,7 +76,7 @@ class CheckCreateUserAccountData
 
 			return "Tous les champs reservés au mot de passe n'ont pas été remplis";
 
-		}elseif(isset($password) AND !empty($password) AND !preg_match("#[a-zA-Z0-9]+#", $password)){
+		}elseif(!empty($password) AND !preg_match("#[a-zA-Z0-9]+#", $password)){
 
 			return "Votre mot de passe doit contenir des chiffres et lettres (majuscules et miniscules)";
 
